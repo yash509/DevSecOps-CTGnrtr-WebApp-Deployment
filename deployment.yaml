@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: ctgnratr-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: ctgnratr
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: ctgnratr
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: ctgnratr
+        image: yash5090/ctgnratr:latest
         ports:
         - containerPort: 5000
