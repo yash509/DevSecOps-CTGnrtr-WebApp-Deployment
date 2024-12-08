@@ -6,6 +6,11 @@ pipeline {
     }
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
+        AWS_ACCOUNT_ID="992382397067"
+        AWS_DEFAULT_REGION="ap-south-1"
+        IMAGE_REPO_NAME="webapp-image"
+        IMAGE_TAG="v1"
+        REPOSITORY_URI = "992382397067.dkr.ecr.ap-south-1.amazonaws.com/webapp-image"
     }
     stages {
         stage('clean workspace') {
